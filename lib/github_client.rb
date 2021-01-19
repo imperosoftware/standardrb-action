@@ -23,7 +23,7 @@ class GithubClient
   def headers
     @headers ||= {
       "Content-Type": "application/json",
-      "Accept": "application/vnd.github.antiope-preview+json",
+      "Accept": "application/vnd.github.v3+json",
       "Authorization": "Bearer #{@github_token}",
       "User-Agent": @user_agent,
     }

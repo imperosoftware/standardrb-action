@@ -19,6 +19,8 @@ class GithubCheckRunService
     @annotations = @report_adapter.annotations(@report)
     @conclusion = @report_adapter.conclusion(@report)
 
+    p @github_data.slice(:owner, :repo), update_check_payload
+
     @client.patch(
       "#{endpoint_url}/#{id}",
       update_check_payload
